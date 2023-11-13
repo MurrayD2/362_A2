@@ -43,6 +43,14 @@ class TestAvgList(unittest.TestCase):
         self.assertFalse(check_pwd(pwd), msg="Password without a lowercase "
                          "letter should fail")
 
+    def test6(self):
+        """Verifies that a password of valid length without an uppercase letter
+        fails
+        """
+        pwd = "aa!asdf12345"
+        self.assertFalse(check_pwd(pwd), msg="Password without an uppercase "
+                         "letter should fail")
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
