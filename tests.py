@@ -14,6 +14,13 @@ class TestAvgList(unittest.TestCase):
         pwd = "0"
         self.assertFalse(check_pwd(pwd), msg="Short password should be False")
 
+    def test2(self):
+        """Verifies that a valid pwd of length 8 returns True
+        """
+        pwd = "aA1!asdf"
+        self.assertTrue(check_pwd(pwd), msg="Password of length 8 should be "
+                        "True")
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
