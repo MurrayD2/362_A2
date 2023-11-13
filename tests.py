@@ -58,6 +58,14 @@ class TestAvgList(unittest.TestCase):
         self.assertFalse(check_pwd(pwd), msg="Password without a number "
                          "should fail")
 
+    def test8(self):
+        """Verifies that a password of valid length without a special character
+        fails
+        """
+        pwd = "aa45asdfASDFER"
+        self.assertFalse(check_pwd(pwd), msg="Password without a special "
+                         "character should fail")
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
