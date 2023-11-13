@@ -1,5 +1,6 @@
 lowercase = "abcdefghijklmnopqrstuvwxyz"
 uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numbers = "0123456789"
 
 
 def check_pwd(pwd: str) -> bool:
@@ -22,7 +23,12 @@ def check_pwd(pwd: str) -> bool:
         if letter in pwd:
             up = True
             break
-    if low is True and up is True:
+    num = False
+    for number in numbers:
+        if number in pwd:
+            num = True
+            break
+    if low is True and up is True and num is True:
         return True
     else:
         return False
