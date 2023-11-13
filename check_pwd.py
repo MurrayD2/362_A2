@@ -3,4 +3,7 @@ def check_pwd(pwd: str) -> bool:
     :param pwd: a password string
     :return: True if password is valid, False otherwise
     """
-    return True
+    if len(pwd) < 8:
+        return False
+    else:
+        return False
